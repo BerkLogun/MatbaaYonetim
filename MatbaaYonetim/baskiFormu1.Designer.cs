@@ -57,6 +57,10 @@ namespace MatbaaYonetim
             this.label13 = new System.Windows.Forms.Label();
             this.baskiYuzuCombo = new System.Windows.Forms.ComboBox();
             this.onBaskıPanel = new System.Windows.Forms.Panel();
+            this.lakAdetOnText = new System.Windows.Forms.TextBox();
+            this.label44 = new System.Windows.Forms.Label();
+            this.selefonAdetOnText = new System.Windows.Forms.TextBox();
+            this.label43 = new System.Windows.Forms.Label();
             this.yaldizOnText = new System.Windows.Forms.TextBox();
             this.label34 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
@@ -75,7 +79,11 @@ namespace MatbaaYonetim
             this.baskıTuruCombo_on = new System.Windows.Forms.ComboBox();
             this.label14 = new System.Windows.Forms.Label();
             this.arkaBaskiPanel = new System.Windows.Forms.Panel();
+            this.selefonAdetArkaText = new System.Windows.Forms.TextBox();
+            this.lakAdetArkaText = new System.Windows.Forms.TextBox();
+            this.label46 = new System.Windows.Forms.Label();
             this.yaldizArkaText = new System.Windows.Forms.TextBox();
+            this.label45 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
             this.label35 = new System.Windows.Forms.Label();
             this.lakTuruCombo_arka = new System.Windows.Forms.ComboBox();
@@ -132,13 +140,37 @@ namespace MatbaaYonetim
             this.label33 = new System.Windows.Forms.Label();
             this.yaldizGideriText = new System.Windows.Forms.TextBox();
             this.label36 = new System.Windows.Forms.Label();
+            this.kesimPanel = new System.Windows.Forms.Panel();
+            this.kesimAdetText = new System.Windows.Forms.TextBox();
+            this.label47 = new System.Windows.Forms.Label();
+            this.kesimEbat2 = new System.Windows.Forms.TextBox();
+            this.label42 = new System.Windows.Forms.Label();
+            this.kesimEbat1 = new System.Windows.Forms.TextBox();
             this.label40 = new System.Windows.Forms.Label();
-            this.kesimCombo = new System.Windows.Forms.TextBox();
+            this.label41 = new System.Windows.Forms.Label();
+            this.kesimİslemCombo = new System.Windows.Forms.ComboBox();
+            this.label48 = new System.Windows.Forms.Label();
+            this.yapistirmaPanel = new System.Windows.Forms.Panel();
+            this.yapistirmaBoyText = new System.Windows.Forms.TextBox();
+            this.label54 = new System.Windows.Forms.Label();
+            this.yapistirmaAdetText = new System.Windows.Forms.TextBox();
+            this.label49 = new System.Windows.Forms.Label();
+            this.yapistirmaIslem2Text = new System.Windows.Forms.TextBox();
+            this.label50 = new System.Windows.Forms.Label();
+            this.yapistirmaIslem1Text = new System.Windows.Forms.TextBox();
+            this.label51 = new System.Windows.Forms.Label();
+            this.label52 = new System.Windows.Forms.Label();
+            this.yapistirmaIslemCombo = new System.Windows.Forms.ComboBox();
+            this.label53 = new System.Windows.Forms.Label();
+            this.kesimCheckBox = new System.Windows.Forms.CheckBox();
+            this.yapistirmaCheckBox = new System.Windows.Forms.CheckBox();
             this.kagitBilgileri.SuspendLayout();
             this.onBaskıPanel.SuspendLayout();
             this.arkaBaskiPanel.SuspendLayout();
             this.önEkstraPanel.SuspendLayout();
             this.arkaEkstraPanel.SuspendLayout();
+            this.kesimPanel.SuspendLayout();
+            this.yapistirmaPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -157,6 +189,10 @@ namespace MatbaaYonetim
             this.firmaAdiBox.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.firmaAdiBox.ForeColor = System.Drawing.Color.Black;
             this.firmaAdiBox.FormattingEnabled = true;
+            this.firmaAdiBox.Items.AddRange(new object[] {
+            "LABEL",
+            "SAFA",
+            "SAFA & LABEL"});
             this.firmaAdiBox.Location = new System.Drawing.Point(201, 55);
             this.firmaAdiBox.Name = "firmaAdiBox";
             this.firmaAdiBox.Size = new System.Drawing.Size(171, 38);
@@ -198,6 +234,8 @@ namespace MatbaaYonetim
             this.isTuruBox.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.isTuruBox.ForeColor = System.Drawing.Color.Black;
             this.isTuruBox.FormattingEnabled = true;
+            this.isTuruBox.Items.AddRange(new object[] {
+            "KARTON"});
             this.isTuruBox.Location = new System.Drawing.Point(201, 140);
             this.isTuruBox.Name = "isTuruBox";
             this.isTuruBox.Size = new System.Drawing.Size(171, 38);
@@ -220,6 +258,10 @@ namespace MatbaaYonetim
             this.makineBox.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.makineBox.ForeColor = System.Drawing.Color.Black;
             this.makineBox.FormattingEnabled = true;
+            this.makineBox.Items.AddRange(new object[] {
+            "SMS2",
+            "50X70",
+            "70X100"});
             this.makineBox.Location = new System.Drawing.Point(707, 56);
             this.makineBox.Name = "makineBox";
             this.makineBox.Size = new System.Drawing.Size(201, 38);
@@ -406,7 +448,9 @@ namespace MatbaaYonetim
             this.baskiYuzuCombo.FormattingEnabled = true;
             this.baskiYuzuCombo.Items.AddRange(new object[] {
             "ÖN",
-            "ÖN + ARKA"});
+            "ÖN + ARKA",
+            "DÜZ REVOLTA",
+            "ETEK-MAKAS REVOLTA"});
             this.baskiYuzuCombo.Location = new System.Drawing.Point(236, 333);
             this.baskiYuzuCombo.Name = "baskiYuzuCombo";
             this.baskiYuzuCombo.Size = new System.Drawing.Size(188, 38);
@@ -416,6 +460,10 @@ namespace MatbaaYonetim
             // onBaskıPanel
             // 
             this.onBaskıPanel.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.onBaskıPanel.Controls.Add(this.lakAdetOnText);
+            this.onBaskıPanel.Controls.Add(this.label44);
+            this.onBaskıPanel.Controls.Add(this.selefonAdetOnText);
+            this.onBaskıPanel.Controls.Add(this.label43);
             this.onBaskıPanel.Controls.Add(this.yaldizOnText);
             this.onBaskıPanel.Controls.Add(this.label34);
             this.onBaskıPanel.Controls.Add(this.label21);
@@ -435,13 +483,48 @@ namespace MatbaaYonetim
             this.onBaskıPanel.Controls.Add(this.label14);
             this.onBaskıPanel.Location = new System.Drawing.Point(57, 401);
             this.onBaskıPanel.Name = "onBaskıPanel";
-            this.onBaskıPanel.Size = new System.Drawing.Size(300, 254);
+            this.onBaskıPanel.Size = new System.Drawing.Size(300, 308);
             this.onBaskıPanel.TabIndex = 15;
             this.onBaskıPanel.Visible = false;
+            this.onBaskıPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.onBaskıPanel_Paint);
+            // 
+            // lakAdetOnText
+            // 
+            this.lakAdetOnText.Location = new System.Drawing.Point(152, 237);
+            this.lakAdetOnText.Name = "lakAdetOnText";
+            this.lakAdetOnText.Size = new System.Drawing.Size(122, 23);
+            this.lakAdetOnText.TabIndex = 20;
+            // 
+            // label44
+            // 
+            this.label44.AutoSize = true;
+            this.label44.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label44.Location = new System.Drawing.Point(35, 237);
+            this.label44.Name = "label44";
+            this.label44.Size = new System.Drawing.Size(78, 20);
+            this.label44.TabIndex = 19;
+            this.label44.Text = "Lak Adedi";
+            // 
+            // selefonAdetOnText
+            // 
+            this.selefonAdetOnText.Location = new System.Drawing.Point(152, 145);
+            this.selefonAdetOnText.Name = "selefonAdetOnText";
+            this.selefonAdetOnText.Size = new System.Drawing.Size(122, 23);
+            this.selefonAdetOnText.TabIndex = 18;
+            // 
+            // label43
+            // 
+            this.label43.AutoSize = true;
+            this.label43.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label43.Location = new System.Drawing.Point(35, 145);
+            this.label43.Name = "label43";
+            this.label43.Size = new System.Drawing.Size(106, 20);
+            this.label43.TabIndex = 17;
+            this.label43.Text = "Selefon Adedi";
             // 
             // yaldizOnText
             // 
-            this.yaldizOnText.Location = new System.Drawing.Point(153, 208);
+            this.yaldizOnText.Location = new System.Drawing.Point(152, 268);
             this.yaldizOnText.Name = "yaldizOnText";
             this.yaldizOnText.Size = new System.Drawing.Size(121, 23);
             this.yaldizOnText.TabIndex = 16;
@@ -450,7 +533,7 @@ namespace MatbaaYonetim
             // 
             this.label34.AutoSize = true;
             this.label34.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label34.Location = new System.Drawing.Point(36, 211);
+            this.label34.Location = new System.Drawing.Point(36, 271);
             this.label34.Name = "label34";
             this.label34.Size = new System.Drawing.Size(49, 20);
             this.label34.TabIndex = 15;
@@ -469,7 +552,10 @@ namespace MatbaaYonetim
             // lakTuruCombo_on
             // 
             this.lakTuruCombo_on.FormattingEnabled = true;
-            this.lakTuruCombo_on.Location = new System.Drawing.Point(152, 177);
+            this.lakTuruCombo_on.Items.AddRange(new object[] {
+            "UV LAK",
+            "MAT VERNİK"});
+            this.lakTuruCombo_on.Location = new System.Drawing.Point(152, 207);
             this.lakTuruCombo_on.Name = "lakTuruCombo_on";
             this.lakTuruCombo_on.Size = new System.Drawing.Size(121, 23);
             this.lakTuruCombo_on.TabIndex = 13;
@@ -478,7 +564,7 @@ namespace MatbaaYonetim
             // 
             this.label20.AutoSize = true;
             this.label20.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label20.Location = new System.Drawing.Point(35, 177);
+            this.label20.Location = new System.Drawing.Point(35, 207);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(69, 20);
             this.label20.TabIndex = 12;
@@ -486,7 +572,7 @@ namespace MatbaaYonetim
             // 
             // lakEbadı2_on
             // 
-            this.lakEbadı2_on.Location = new System.Drawing.Point(225, 147);
+            this.lakEbadı2_on.Location = new System.Drawing.Point(225, 177);
             this.lakEbadı2_on.Name = "lakEbadı2_on";
             this.lakEbadı2_on.Size = new System.Drawing.Size(49, 23);
             this.lakEbadı2_on.TabIndex = 11;
@@ -494,7 +580,7 @@ namespace MatbaaYonetim
             // label19
             // 
             this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(208, 150);
+            this.label19.Location = new System.Drawing.Point(208, 180);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(13, 15);
             this.label19.TabIndex = 10;
@@ -502,7 +588,7 @@ namespace MatbaaYonetim
             // 
             // lakEbadı1_on
             // 
-            this.lakEbadı1_on.Location = new System.Drawing.Point(153, 147);
+            this.lakEbadı1_on.Location = new System.Drawing.Point(153, 177);
             this.lakEbadı1_on.Name = "lakEbadı1_on";
             this.lakEbadı1_on.Size = new System.Drawing.Size(49, 23);
             this.lakEbadı1_on.TabIndex = 9;
@@ -511,7 +597,7 @@ namespace MatbaaYonetim
             // 
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label18.Location = new System.Drawing.Point(36, 147);
+            this.label18.Location = new System.Drawing.Point(36, 176);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(75, 20);
             this.label18.TabIndex = 8;
@@ -520,6 +606,9 @@ namespace MatbaaYonetim
             // selefonTuruCombo_on
             // 
             this.selefonTuruCombo_on.FormattingEnabled = true;
+            this.selefonTuruCombo_on.Items.AddRange(new object[] {
+            "MAT",
+            "PARLAK"});
             this.selefonTuruCombo_on.Location = new System.Drawing.Point(153, 115);
             this.selefonTuruCombo_on.Name = "selefonTuruCombo_on";
             this.selefonTuruCombo_on.Size = new System.Drawing.Size(121, 23);
@@ -590,7 +679,11 @@ namespace MatbaaYonetim
             // arkaBaskiPanel
             // 
             this.arkaBaskiPanel.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.arkaBaskiPanel.Controls.Add(this.selefonAdetArkaText);
+            this.arkaBaskiPanel.Controls.Add(this.lakAdetArkaText);
+            this.arkaBaskiPanel.Controls.Add(this.label46);
             this.arkaBaskiPanel.Controls.Add(this.yaldizArkaText);
+            this.arkaBaskiPanel.Controls.Add(this.label45);
             this.arkaBaskiPanel.Controls.Add(this.label22);
             this.arkaBaskiPanel.Controls.Add(this.label35);
             this.arkaBaskiPanel.Controls.Add(this.lakTuruCombo_arka);
@@ -609,16 +702,50 @@ namespace MatbaaYonetim
             this.arkaBaskiPanel.Controls.Add(this.label29);
             this.arkaBaskiPanel.Location = new System.Drawing.Point(805, 401);
             this.arkaBaskiPanel.Name = "arkaBaskiPanel";
-            this.arkaBaskiPanel.Size = new System.Drawing.Size(300, 254);
+            this.arkaBaskiPanel.Size = new System.Drawing.Size(300, 308);
             this.arkaBaskiPanel.TabIndex = 16;
             this.arkaBaskiPanel.Visible = false;
             // 
+            // selefonAdetArkaText
+            // 
+            this.selefonAdetArkaText.Location = new System.Drawing.Point(150, 145);
+            this.selefonAdetArkaText.Name = "selefonAdetArkaText";
+            this.selefonAdetArkaText.Size = new System.Drawing.Size(122, 23);
+            this.selefonAdetArkaText.TabIndex = 22;
+            // 
+            // lakAdetArkaText
+            // 
+            this.lakAdetArkaText.Location = new System.Drawing.Point(150, 236);
+            this.lakAdetArkaText.Name = "lakAdetArkaText";
+            this.lakAdetArkaText.Size = new System.Drawing.Size(122, 23);
+            this.lakAdetArkaText.TabIndex = 22;
+            // 
+            // label46
+            // 
+            this.label46.AutoSize = true;
+            this.label46.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label46.Location = new System.Drawing.Point(33, 145);
+            this.label46.Name = "label46";
+            this.label46.Size = new System.Drawing.Size(106, 20);
+            this.label46.TabIndex = 21;
+            this.label46.Text = "Selefon Adedi";
+            // 
             // yaldizArkaText
             // 
-            this.yaldizArkaText.Location = new System.Drawing.Point(150, 210);
+            this.yaldizArkaText.Location = new System.Drawing.Point(150, 264);
             this.yaldizArkaText.Name = "yaldizArkaText";
             this.yaldizArkaText.Size = new System.Drawing.Size(121, 23);
             this.yaldizArkaText.TabIndex = 18;
+            // 
+            // label45
+            // 
+            this.label45.AutoSize = true;
+            this.label45.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label45.Location = new System.Drawing.Point(33, 236);
+            this.label45.Name = "label45";
+            this.label45.Size = new System.Drawing.Size(78, 20);
+            this.label45.TabIndex = 21;
+            this.label45.Text = "Lak Adedi";
             // 
             // label22
             // 
@@ -634,7 +761,7 @@ namespace MatbaaYonetim
             // 
             this.label35.AutoSize = true;
             this.label35.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label35.Location = new System.Drawing.Point(33, 213);
+            this.label35.Location = new System.Drawing.Point(33, 267);
             this.label35.Name = "label35";
             this.label35.Size = new System.Drawing.Size(49, 20);
             this.label35.TabIndex = 17;
@@ -643,7 +770,10 @@ namespace MatbaaYonetim
             // lakTuruCombo_arka
             // 
             this.lakTuruCombo_arka.FormattingEnabled = true;
-            this.lakTuruCombo_arka.Location = new System.Drawing.Point(150, 177);
+            this.lakTuruCombo_arka.Items.AddRange(new object[] {
+            "UV LAK",
+            "MAT VERNİK"});
+            this.lakTuruCombo_arka.Location = new System.Drawing.Point(150, 206);
             this.lakTuruCombo_arka.Name = "lakTuruCombo_arka";
             this.lakTuruCombo_arka.Size = new System.Drawing.Size(121, 23);
             this.lakTuruCombo_arka.TabIndex = 13;
@@ -652,7 +782,7 @@ namespace MatbaaYonetim
             // 
             this.label23.AutoSize = true;
             this.label23.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label23.Location = new System.Drawing.Point(33, 177);
+            this.label23.Location = new System.Drawing.Point(33, 206);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(69, 20);
             this.label23.TabIndex = 12;
@@ -660,7 +790,7 @@ namespace MatbaaYonetim
             // 
             // lakEbadı2_arka
             // 
-            this.lakEbadı2_arka.Location = new System.Drawing.Point(222, 147);
+            this.lakEbadı2_arka.Location = new System.Drawing.Point(222, 176);
             this.lakEbadı2_arka.Name = "lakEbadı2_arka";
             this.lakEbadı2_arka.Size = new System.Drawing.Size(49, 23);
             this.lakEbadı2_arka.TabIndex = 11;
@@ -668,7 +798,7 @@ namespace MatbaaYonetim
             // label24
             // 
             this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(205, 150);
+            this.label24.Location = new System.Drawing.Point(205, 179);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(13, 15);
             this.label24.TabIndex = 10;
@@ -676,7 +806,7 @@ namespace MatbaaYonetim
             // 
             // lakEbadı1_arka
             // 
-            this.lakEbadı1_arka.Location = new System.Drawing.Point(150, 147);
+            this.lakEbadı1_arka.Location = new System.Drawing.Point(150, 176);
             this.lakEbadı1_arka.Name = "lakEbadı1_arka";
             this.lakEbadı1_arka.Size = new System.Drawing.Size(49, 23);
             this.lakEbadı1_arka.TabIndex = 9;
@@ -685,7 +815,7 @@ namespace MatbaaYonetim
             // 
             this.label25.AutoSize = true;
             this.label25.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label25.Location = new System.Drawing.Point(33, 147);
+            this.label25.Location = new System.Drawing.Point(33, 176);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(75, 20);
             this.label25.TabIndex = 8;
@@ -694,6 +824,9 @@ namespace MatbaaYonetim
             // selefonTuruCombo_arka
             // 
             this.selefonTuruCombo_arka.FormattingEnabled = true;
+            this.selefonTuruCombo_arka.Items.AddRange(new object[] {
+            "MAT",
+            "PARLAK"});
             this.selefonTuruCombo_arka.Location = new System.Drawing.Point(150, 115);
             this.selefonTuruCombo_arka.Name = "selefonTuruCombo_arka";
             this.selefonTuruCombo_arka.Size = new System.Drawing.Size(121, 23);
@@ -1116,7 +1249,7 @@ namespace MatbaaYonetim
             // 
             this.exBoyaDText.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.exBoyaDText.ForeColor = System.Drawing.Color.Black;
-            this.exBoyaDText.Location = new System.Drawing.Point(328, 722);
+            this.exBoyaDText.Location = new System.Drawing.Point(1264, 96);
             this.exBoyaDText.Name = "exBoyaDText";
             this.exBoyaDText.Size = new System.Drawing.Size(201, 35);
             this.exBoyaDText.TabIndex = 22;
@@ -1126,7 +1259,7 @@ namespace MatbaaYonetim
             this.label33.AutoSize = true;
             this.label33.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label33.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.label33.Location = new System.Drawing.Point(57, 725);
+            this.label33.Location = new System.Drawing.Point(993, 99);
             this.label33.Name = "label33";
             this.label33.Size = new System.Drawing.Size(253, 30);
             this.label33.TabIndex = 21;
@@ -1136,7 +1269,7 @@ namespace MatbaaYonetim
             // 
             this.yaldizGideriText.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.yaldizGideriText.ForeColor = System.Drawing.Color.Black;
-            this.yaldizGideriText.Location = new System.Drawing.Point(328, 776);
+            this.yaldizGideriText.Location = new System.Drawing.Point(1264, 150);
             this.yaldizGideriText.Name = "yaldizGideriText";
             this.yaldizGideriText.Size = new System.Drawing.Size(201, 35);
             this.yaldizGideriText.TabIndex = 24;
@@ -1146,49 +1279,276 @@ namespace MatbaaYonetim
             this.label36.AutoSize = true;
             this.label36.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label36.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.label36.Location = new System.Drawing.Point(57, 779);
+            this.label36.Location = new System.Drawing.Point(993, 153);
             this.label36.Name = "label36";
             this.label36.Size = new System.Drawing.Size(160, 30);
             this.label36.TabIndex = 23;
             this.label36.Text = "YALDIZ GİDERİ";
             // 
+            // kesimPanel
+            // 
+            this.kesimPanel.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.kesimPanel.Controls.Add(this.kesimAdetText);
+            this.kesimPanel.Controls.Add(this.label47);
+            this.kesimPanel.Controls.Add(this.kesimEbat2);
+            this.kesimPanel.Controls.Add(this.label42);
+            this.kesimPanel.Controls.Add(this.kesimEbat1);
+            this.kesimPanel.Controls.Add(this.label40);
+            this.kesimPanel.Controls.Add(this.label41);
+            this.kesimPanel.Controls.Add(this.kesimİslemCombo);
+            this.kesimPanel.Controls.Add(this.label48);
+            this.kesimPanel.Location = new System.Drawing.Point(57, 738);
+            this.kesimPanel.Name = "kesimPanel";
+            this.kesimPanel.Size = new System.Drawing.Size(300, 180);
+            this.kesimPanel.TabIndex = 17;
+            this.kesimPanel.Visible = false;
+            // 
+            // kesimAdetText
+            // 
+            this.kesimAdetText.Location = new System.Drawing.Point(152, 125);
+            this.kesimAdetText.Name = "kesimAdetText";
+            this.kesimAdetText.Size = new System.Drawing.Size(122, 23);
+            this.kesimAdetText.TabIndex = 19;
+            // 
+            // label47
+            // 
+            this.label47.AutoSize = true;
+            this.label47.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label47.Location = new System.Drawing.Point(36, 128);
+            this.label47.Name = "label47";
+            this.label47.Size = new System.Drawing.Size(48, 20);
+            this.label47.TabIndex = 18;
+            this.label47.Text = "ADET";
+            // 
+            // kesimEbat2
+            // 
+            this.kesimEbat2.Location = new System.Drawing.Point(224, 86);
+            this.kesimEbat2.Name = "kesimEbat2";
+            this.kesimEbat2.Size = new System.Drawing.Size(49, 23);
+            this.kesimEbat2.TabIndex = 17;
+            // 
+            // label42
+            // 
+            this.label42.AutoSize = true;
+            this.label42.Location = new System.Drawing.Point(205, 89);
+            this.label42.Name = "label42";
+            this.label42.Size = new System.Drawing.Size(13, 15);
+            this.label42.TabIndex = 17;
+            this.label42.Text = "x";
+            // 
+            // kesimEbat1
+            // 
+            this.kesimEbat1.Location = new System.Drawing.Point(152, 86);
+            this.kesimEbat1.Name = "kesimEbat1";
+            this.kesimEbat1.Size = new System.Drawing.Size(49, 23);
+            this.kesimEbat1.TabIndex = 17;
+            // 
             // label40
             // 
             this.label40.AutoSize = true;
-            this.label40.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label40.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.label40.Location = new System.Drawing.Point(672, 725);
+            this.label40.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label40.Location = new System.Drawing.Point(36, 89);
             this.label40.Name = "label40";
-            this.label40.Size = new System.Drawing.Size(77, 30);
-            this.label40.TabIndex = 25;
-            this.label40.Text = "KESİM";
+            this.label40.Size = new System.Drawing.Size(46, 20);
+            this.label40.TabIndex = 15;
+            this.label40.Text = "EBAT";
             // 
-            // kesimCombo
+            // label41
             // 
-            this.kesimCombo.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.kesimCombo.ForeColor = System.Drawing.Color.Black;
-            this.kesimCombo.Location = new System.Drawing.Point(773, 722);
-            this.kesimCombo.Name = "kesimCombo";
-            this.kesimCombo.Size = new System.Drawing.Size(201, 35);
-            this.kesimCombo.TabIndex = 26;
+            this.label41.AutoSize = true;
+            this.label41.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label41.Location = new System.Drawing.Point(109, 0);
+            this.label41.Name = "label41";
+            this.label41.Size = new System.Drawing.Size(87, 32);
+            this.label41.TabIndex = 14;
+            this.label41.Text = "KESİM";
+            // 
+            // kesimİslemCombo
+            // 
+            this.kesimİslemCombo.FormattingEnabled = true;
+            this.kesimİslemCombo.Items.AddRange(new object[] {
+            "BOBST KESİM",
+            "BOBST GOFRE",
+            "KAZANLI KESİM",
+            "KAZANLI GOFRE"});
+            this.kesimİslemCombo.Location = new System.Drawing.Point(153, 46);
+            this.kesimİslemCombo.Name = "kesimİslemCombo";
+            this.kesimİslemCombo.Size = new System.Drawing.Size(121, 23);
+            this.kesimİslemCombo.TabIndex = 1;
+            // 
+            // label48
+            // 
+            this.label48.AutoSize = true;
+            this.label48.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label48.Location = new System.Drawing.Point(36, 49);
+            this.label48.Name = "label48";
+            this.label48.Size = new System.Drawing.Size(52, 20);
+            this.label48.TabIndex = 0;
+            this.label48.Text = "İŞLEM";
+            // 
+            // yapistirmaPanel
+            // 
+            this.yapistirmaPanel.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.yapistirmaPanel.Controls.Add(this.yapistirmaBoyText);
+            this.yapistirmaPanel.Controls.Add(this.label54);
+            this.yapistirmaPanel.Controls.Add(this.yapistirmaAdetText);
+            this.yapistirmaPanel.Controls.Add(this.label49);
+            this.yapistirmaPanel.Controls.Add(this.yapistirmaIslem2Text);
+            this.yapistirmaPanel.Controls.Add(this.label50);
+            this.yapistirmaPanel.Controls.Add(this.yapistirmaIslem1Text);
+            this.yapistirmaPanel.Controls.Add(this.label51);
+            this.yapistirmaPanel.Controls.Add(this.label52);
+            this.yapistirmaPanel.Controls.Add(this.yapistirmaIslemCombo);
+            this.yapistirmaPanel.Controls.Add(this.label53);
+            this.yapistirmaPanel.Location = new System.Drawing.Point(381, 738);
+            this.yapistirmaPanel.Name = "yapistirmaPanel";
+            this.yapistirmaPanel.Size = new System.Drawing.Size(300, 180);
+            this.yapistirmaPanel.TabIndex = 20;
+            this.yapistirmaPanel.Visible = false;
+            // 
+            // yapistirmaBoyText
+            // 
+            this.yapistirmaBoyText.Location = new System.Drawing.Point(151, 125);
+            this.yapistirmaBoyText.Name = "yapistirmaBoyText";
+            this.yapistirmaBoyText.Size = new System.Drawing.Size(122, 23);
+            this.yapistirmaBoyText.TabIndex = 21;
+            // 
+            // label54
+            // 
+            this.label54.AutoSize = true;
+            this.label54.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label54.Location = new System.Drawing.Point(38, 128);
+            this.label54.Name = "label54";
+            this.label54.Size = new System.Drawing.Size(39, 20);
+            this.label54.TabIndex = 20;
+            this.label54.Text = "BOY";
+            // 
+            // yapistirmaAdetText
+            // 
+            this.yapistirmaAdetText.Location = new System.Drawing.Point(152, 99);
+            this.yapistirmaAdetText.Name = "yapistirmaAdetText";
+            this.yapistirmaAdetText.Size = new System.Drawing.Size(122, 23);
+            this.yapistirmaAdetText.TabIndex = 19;
+            // 
+            // label49
+            // 
+            this.label49.AutoSize = true;
+            this.label49.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label49.Location = new System.Drawing.Point(36, 102);
+            this.label49.Name = "label49";
+            this.label49.Size = new System.Drawing.Size(48, 20);
+            this.label49.TabIndex = 18;
+            this.label49.Text = "ADET";
+            // 
+            // yapistirmaIslem2Text
+            // 
+            this.yapistirmaIslem2Text.Location = new System.Drawing.Point(224, 72);
+            this.yapistirmaIslem2Text.Name = "yapistirmaIslem2Text";
+            this.yapistirmaIslem2Text.Size = new System.Drawing.Size(49, 23);
+            this.yapistirmaIslem2Text.TabIndex = 17;
+            // 
+            // label50
+            // 
+            this.label50.AutoSize = true;
+            this.label50.Location = new System.Drawing.Point(205, 75);
+            this.label50.Name = "label50";
+            this.label50.Size = new System.Drawing.Size(13, 15);
+            this.label50.TabIndex = 17;
+            this.label50.Text = "x";
+            // 
+            // yapistirmaIslem1Text
+            // 
+            this.yapistirmaIslem1Text.Location = new System.Drawing.Point(152, 72);
+            this.yapistirmaIslem1Text.Name = "yapistirmaIslem1Text";
+            this.yapistirmaIslem1Text.Size = new System.Drawing.Size(49, 23);
+            this.yapistirmaIslem1Text.TabIndex = 17;
+            // 
+            // label51
+            // 
+            this.label51.AutoSize = true;
+            this.label51.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label51.Location = new System.Drawing.Point(36, 75);
+            this.label51.Name = "label51";
+            this.label51.Size = new System.Drawing.Size(46, 20);
+            this.label51.TabIndex = 15;
+            this.label51.Text = "EBAT";
+            // 
+            // label52
+            // 
+            this.label52.AutoSize = true;
+            this.label52.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label52.Location = new System.Drawing.Point(67, 0);
+            this.label52.Name = "label52";
+            this.label52.Size = new System.Drawing.Size(158, 32);
+            this.label52.TabIndex = 14;
+            this.label52.Text = "YAPIŞTIRMA";
+            // 
+            // yapistirmaIslemCombo
+            // 
+            this.yapistirmaIslemCombo.FormattingEnabled = true;
+            this.yapistirmaIslemCombo.Items.AddRange(new object[] {
+            "YAN",
+            "DİP"});
+            this.yapistirmaIslemCombo.Location = new System.Drawing.Point(153, 46);
+            this.yapistirmaIslemCombo.Name = "yapistirmaIslemCombo";
+            this.yapistirmaIslemCombo.Size = new System.Drawing.Size(121, 23);
+            this.yapistirmaIslemCombo.TabIndex = 1;
+            // 
+            // label53
+            // 
+            this.label53.AutoSize = true;
+            this.label53.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label53.Location = new System.Drawing.Point(36, 49);
+            this.label53.Name = "label53";
+            this.label53.Size = new System.Drawing.Size(52, 20);
+            this.label53.TabIndex = 0;
+            this.label53.Text = "İŞLEM";
+            // 
+            // kesimCheckBox
+            // 
+            this.kesimCheckBox.AutoSize = true;
+            this.kesimCheckBox.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.kesimCheckBox.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.kesimCheckBox.Location = new System.Drawing.Point(468, 337);
+            this.kesimCheckBox.Name = "kesimCheckBox";
+            this.kesimCheckBox.Size = new System.Drawing.Size(96, 34);
+            this.kesimCheckBox.TabIndex = 25;
+            this.kesimCheckBox.Text = "KESİM";
+            this.kesimCheckBox.UseVisualStyleBackColor = true;
+            this.kesimCheckBox.CheckedChanged += new System.EventHandler(this.kesimCheckBox_CheckedChanged);
+            // 
+            // yapistirmaCheckBox
+            // 
+            this.yapistirmaCheckBox.AutoSize = true;
+            this.yapistirmaCheckBox.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.yapistirmaCheckBox.ForeColor = System.Drawing.SystemColors.HighlightText;
+            this.yapistirmaCheckBox.Location = new System.Drawing.Point(595, 337);
+            this.yapistirmaCheckBox.Name = "yapistirmaCheckBox";
+            this.yapistirmaCheckBox.Size = new System.Drawing.Size(158, 34);
+            this.yapistirmaCheckBox.TabIndex = 26;
+            this.yapistirmaCheckBox.Text = "YAPIŞTIRMA";
+            this.yapistirmaCheckBox.UseVisualStyleBackColor = true;
+            this.yapistirmaCheckBox.CheckedChanged += new System.EventHandler(this.yapistirmaCheckBox_CheckedChanged);
             // 
             // baskiFormu1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(57)))), ((int)(((byte)(75)))));
-            this.Controls.Add(this.kesimCombo);
-            this.Controls.Add(this.label40);
+            this.Controls.Add(this.yapistirmaCheckBox);
+            this.Controls.Add(this.kesimCheckBox);
+            this.Controls.Add(this.yapistirmaPanel);
+            this.Controls.Add(this.kesimPanel);
             this.Controls.Add(this.yaldizGideriText);
-            this.Controls.Add(this.label36);
-            this.Controls.Add(this.exBoyaDText);
-            this.Controls.Add(this.label33);
             this.Controls.Add(this.formaSayisiText);
             this.Controls.Add(this.label32);
+            this.Controls.Add(this.label36);
             this.Controls.Add(this.notlarText);
             this.Controls.Add(this.label31);
+            this.Controls.Add(this.exBoyaDText);
             this.Controls.Add(this.arkaEkstraPanel);
             this.Controls.Add(this.önEkstraPanel);
+            this.Controls.Add(this.label33);
             this.Controls.Add(this.arkaBaskiPanel);
             this.Controls.Add(this.onBaskıPanel);
             this.Controls.Add(this.baskiYuzuCombo);
@@ -1218,6 +1578,10 @@ namespace MatbaaYonetim
             this.önEkstraPanel.PerformLayout();
             this.arkaEkstraPanel.ResumeLayout(false);
             this.arkaEkstraPanel.PerformLayout();
+            this.kesimPanel.ResumeLayout(false);
+            this.kesimPanel.PerformLayout();
+            this.yapistirmaPanel.ResumeLayout(false);
+            this.yapistirmaPanel.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1328,7 +1692,37 @@ namespace MatbaaYonetim
         private System.Windows.Forms.Label label33;
         private System.Windows.Forms.TextBox yaldizGideriText;
         private System.Windows.Forms.Label label36;
+        private System.Windows.Forms.TextBox lakAdetOnText;
+        private System.Windows.Forms.Label label44;
+        private System.Windows.Forms.TextBox selefonAdetOnText;
+        private System.Windows.Forms.Label label43;
+        private System.Windows.Forms.Panel kesimPanel;
+        private System.Windows.Forms.TextBox kesimEbat2;
+        private System.Windows.Forms.Label label42;
+        private System.Windows.Forms.TextBox kesimEbat1;
         private System.Windows.Forms.Label label40;
-        private System.Windows.Forms.TextBox kesimCombo;
+        private System.Windows.Forms.Label label41;
+        private System.Windows.Forms.ComboBox kesimİslemCombo;
+        private System.Windows.Forms.Label label48;
+        private System.Windows.Forms.TextBox selefonAdetArkaText;
+        private System.Windows.Forms.TextBox lakAdetArkaText;
+        private System.Windows.Forms.Label label46;
+        private System.Windows.Forms.Label label45;
+        private System.Windows.Forms.TextBox kesimAdetText;
+        private System.Windows.Forms.Label label47;
+        private System.Windows.Forms.Panel yapistirmaPanel;
+        private System.Windows.Forms.TextBox yapistirmaBoyText;
+        private System.Windows.Forms.Label label54;
+        private System.Windows.Forms.TextBox yapistirmaAdetText;
+        private System.Windows.Forms.Label label49;
+        private System.Windows.Forms.TextBox yapistirmaIslem2Text;
+        private System.Windows.Forms.Label label50;
+        private System.Windows.Forms.TextBox yapistirmaIslem1Text;
+        private System.Windows.Forms.Label label51;
+        private System.Windows.Forms.Label label52;
+        private System.Windows.Forms.ComboBox yapistirmaIslemCombo;
+        private System.Windows.Forms.Label label53;
+        private System.Windows.Forms.CheckBox kesimCheckBox;
+        private System.Windows.Forms.CheckBox yapistirmaCheckBox;
     }
 }
