@@ -93,10 +93,18 @@ namespace MatbaaYonetim
                 onBaskıPanel.Visible = true;
                 arkaBaskiPanel.Visible = true;
             }
+            else if(selectecBaskiYuzu == "DÜZ REVOLTA" || selectecBaskiYuzu == "ETEK-MAKAS REVOLTA")
+            {
+                onBaskıPanel.Visible = true;
+                arkaBaskiPanel.Visible = false;
+                arkaEkstraPanel.Visible = false;
+            }
             else
             {
                 onBaskıPanel.Visible = false;
                 arkaBaskiPanel.Visible = false;
+                önEkstraPanel.Visible = false;
+                arkaEkstraPanel.Visible = false;
             }
         }
 
@@ -208,6 +216,35 @@ namespace MatbaaYonetim
                 extraTextList[i].Visible = true;
             }
 
+        }
+
+        private void onBaskıPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void yapistirmaCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if(yapistirmaCheckBox.Checked == true)
+            {
+                yapistirmaPanel.Visible = true;
+            }
+            else
+            {
+                yapistirmaPanel.Visible = false;
+            }
+        }
+
+        private void kesimCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if(kesimCheckBox.Checked == true)
+            {
+                kesimPanel.Visible = true;
+            }
+            else
+            {
+                kesimPanel.Visible = false;
+            }
         }
     }
 }

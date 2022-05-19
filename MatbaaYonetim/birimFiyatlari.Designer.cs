@@ -1403,6 +1403,7 @@ namespace MatbaaYonetim
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(57)))), ((int)(((byte)(75)))));
             this.Controls.Add(this.panel8);
             this.Controls.Add(this.panel7);
             this.Controls.Add(this.panel6);
@@ -1459,7 +1460,6 @@ namespace MatbaaYonetim
         private System.Windows.Forms.TextBox tirajCMYK_70x100Fiyat;
         private System.Windows.Forms.TextBox baski42_70x100Fiyat;
         private System.Windows.Forms.TextBox baski41_70x100Fiyat;
-        private System.Windows.Forms.TextBox cmyk_70x100Fiyat;
         private System.Windows.Forms.TextBox ekstra4_70x100Fiyat;
         private System.Windows.Forms.TextBox ekstra3_70x100Fiyat;
         private System.Windows.Forms.TextBox ekstra2_70x100Fiyat;
@@ -1564,5 +1564,6 @@ namespace MatbaaYonetim
         private System.Windows.Forms.Label label83;
         private System.Windows.Forms.Label label84;
         private System.Windows.Forms.Label label85;
+        public System.Windows.Forms.TextBox cmyk_70x100Fiyat;
     }
 }
