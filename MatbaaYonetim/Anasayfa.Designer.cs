@@ -30,14 +30,14 @@ namespace MatbaaYonetim
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.birimFiyatlari1 = new MatbaaYonetim.birimFiyatlari();
+            this.aylikRaporlar1 = new MatbaaYonetim.aylikRaporlar();
             this.aylikRaporButton = new System.Windows.Forms.Button();
             this.fiyatListeButton = new System.Windows.Forms.Button();
             this.isListesiButton = new System.Windows.Forms.Button();
             this.isBaskiButton = new System.Windows.Forms.Button();
             this.baskiFormu11 = new MatbaaYonetim.baskiFormu1();
             this.isListesi1 = new MatbaaYonetim.IsListesi();
-            this.aylikRaporlar1 = new MatbaaYonetim.aylikRaporlar();
-            this.birimFiyatlari1 = new MatbaaYonetim.birimFiyatlari();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -47,15 +47,37 @@ namespace MatbaaYonetim
             | System.Windows.Forms.AnchorStyles.Left)));
             this.panel1.AutoSize = true;
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(32)))), ((int)(((byte)(50)))));
+            this.panel1.Controls.Add(this.birimFiyatlari1);
+            this.panel1.Controls.Add(this.aylikRaporlar1);
             this.panel1.Controls.Add(this.aylikRaporButton);
             this.panel1.Controls.Add(this.fiyatListeButton);
             this.panel1.Controls.Add(this.isListesiButton);
             this.panel1.Controls.Add(this.isBaskiButton);
+            this.panel1.Controls.Add(this.baskiFormu11);
+            this.panel1.Controls.Add(this.isListesi1);
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(261, 1046);
+            this.panel1.Size = new System.Drawing.Size(2380, 1237);
             this.panel1.TabIndex = 0;
+            // 
+            // birimFiyatlari1
+            // 
+            this.birimFiyatlari1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(57)))), ((int)(((byte)(75)))));
+            this.birimFiyatlari1.Location = new System.Drawing.Point(264, 0);
+            this.birimFiyatlari1.Margin = new System.Windows.Forms.Padding(0);
+            this.birimFiyatlari1.Name = "birimFiyatlari1";
+            this.birimFiyatlari1.Size = new System.Drawing.Size(1257, 969);
+            this.birimFiyatlari1.TabIndex = 4;
+            // 
+            // aylikRaporlar1
+            // 
+            this.aylikRaporlar1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(71)))), ((int)(((byte)(86)))));
+            this.aylikRaporlar1.ForeColor = System.Drawing.SystemColors.Menu;
+            this.aylikRaporlar1.Location = new System.Drawing.Point(264, 0);
+            this.aylikRaporlar1.Name = "aylikRaporlar1";
+            this.aylikRaporlar1.Size = new System.Drawing.Size(1843, 1043);
+            this.aylikRaporlar1.TabIndex = 3;
             // 
             // aylikRaporButton
             // 
@@ -63,7 +85,7 @@ namespace MatbaaYonetim
             this.aylikRaporButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.aylikRaporButton.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.aylikRaporButton.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.aylikRaporButton.Location = new System.Drawing.Point(0, 374);
+            this.aylikRaporButton.Location = new System.Drawing.Point(0, 304);
             this.aylikRaporButton.Margin = new System.Windows.Forms.Padding(0);
             this.aylikRaporButton.Name = "aylikRaporButton";
             this.aylikRaporButton.Size = new System.Drawing.Size(261, 70);
@@ -78,12 +100,12 @@ namespace MatbaaYonetim
             this.fiyatListeButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.fiyatListeButton.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.fiyatListeButton.ForeColor = System.Drawing.SystemColors.HighlightText;
-            this.fiyatListeButton.Location = new System.Drawing.Point(0, 304);
+            this.fiyatListeButton.Image = global::MatbaaYonetim.Properties.Resources.icons8_support_32;
+            this.fiyatListeButton.Location = new System.Drawing.Point(0, 0);
             this.fiyatListeButton.Margin = new System.Windows.Forms.Padding(0);
             this.fiyatListeButton.Name = "fiyatListeButton";
-            this.fiyatListeButton.Size = new System.Drawing.Size(261, 70);
+            this.fiyatListeButton.Size = new System.Drawing.Size(33, 35);
             this.fiyatListeButton.TabIndex = 2;
-            this.fiyatListeButton.Text = "FİYAT LİSTESİ";
             this.fiyatListeButton.UseVisualStyleBackColor = true;
             this.fiyatListeButton.Click += new System.EventHandler(this.fiyatListeButton_Click_1);
             // 
@@ -120,7 +142,7 @@ namespace MatbaaYonetim
             // baskiFormu11
             // 
             this.baskiFormu11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(57)))), ((int)(((byte)(75)))));
-            this.baskiFormu11.Location = new System.Drawing.Point(255, 3);
+            this.baskiFormu11.Location = new System.Drawing.Point(264, 0);
             this.baskiFormu11.Name = "baskiFormu11";
             this.baskiFormu11.Size = new System.Drawing.Size(1498, 1080);
             this.baskiFormu11.TabIndex = 1;
@@ -128,27 +150,10 @@ namespace MatbaaYonetim
             // isListesi1
             // 
             this.isListesi1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(57)))), ((int)(((byte)(75)))));
-            this.isListesi1.Location = new System.Drawing.Point(255, 3);
+            this.isListesi1.Location = new System.Drawing.Point(264, 3);
             this.isListesi1.Name = "isListesi1";
             this.isListesi1.Size = new System.Drawing.Size(1843, 969);
             this.isListesi1.TabIndex = 2;
-            // 
-            // aylikRaporlar1
-            // 
-            this.aylikRaporlar1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(71)))), ((int)(((byte)(86)))));
-            this.aylikRaporlar1.ForeColor = System.Drawing.SystemColors.Menu;
-            this.aylikRaporlar1.Location = new System.Drawing.Point(255, 0);
-            this.aylikRaporlar1.Name = "aylikRaporlar1";
-            this.aylikRaporlar1.Size = new System.Drawing.Size(1843, 1043);
-            this.aylikRaporlar1.TabIndex = 3;
-            // 
-            // birimFiyatlari1
-            // 
-            this.birimFiyatlari1.Location = new System.Drawing.Point(255, 3);
-            this.birimFiyatlari1.Margin = new System.Windows.Forms.Padding(0);
-            this.birimFiyatlari1.Name = "birimFiyatlari1";
-            this.birimFiyatlari1.Size = new System.Drawing.Size(1257, 1040);
-            this.birimFiyatlari1.TabIndex = 4;
             // 
             // Anasayfa
             // 
@@ -156,10 +161,6 @@ namespace MatbaaYonetim
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(57)))), ((int)(((byte)(75)))));
             this.ClientSize = new System.Drawing.Size(1904, 1041);
-            this.Controls.Add(this.birimFiyatlari1);
-            this.Controls.Add(this.aylikRaporlar1);
-            this.Controls.Add(this.isListesi1);
-            this.Controls.Add(this.baskiFormu11);
             this.Controls.Add(this.panel1);
             this.Name = "Anasayfa";
             this.Text = "Matbaa Sistemi";
@@ -181,6 +182,8 @@ namespace MatbaaYonetim
         private IsListesi isListesi1;
         private aylikRaporlar aylikRaporlar1;
         private birimFiyatlari birimFiyatlari1;
+
+        //bozulunca burdan sil calıstır ekle tekrar sil tekrar ekle
     }
 }
 

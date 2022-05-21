@@ -29,10 +29,11 @@ namespace MatbaaYonetim
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(baskiFormu1));
             this.label1 = new System.Windows.Forms.Label();
             this.firmaAdiBox = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.isAdiBox = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.isTuruBox = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -57,6 +58,7 @@ namespace MatbaaYonetim
             this.label13 = new System.Windows.Forms.Label();
             this.baskiYuzuCombo = new System.Windows.Forms.ComboBox();
             this.onBaskıPanel = new System.Windows.Forms.Panel();
+            this.dispersOnCheck = new System.Windows.Forms.CheckBox();
             this.lakAdetOnText = new System.Windows.Forms.TextBox();
             this.label44 = new System.Windows.Forms.Label();
             this.selefonAdetOnText = new System.Windows.Forms.TextBox();
@@ -79,6 +81,7 @@ namespace MatbaaYonetim
             this.baskıTuruCombo_on = new System.Windows.Forms.ComboBox();
             this.label14 = new System.Windows.Forms.Label();
             this.arkaBaskiPanel = new System.Windows.Forms.Panel();
+            this.dispersArkaCheck = new System.Windows.Forms.CheckBox();
             this.selefonAdetArkaText = new System.Windows.Forms.TextBox();
             this.lakAdetArkaText = new System.Windows.Forms.TextBox();
             this.label46 = new System.Windows.Forms.Label();
@@ -164,6 +167,7 @@ namespace MatbaaYonetim
             this.label53 = new System.Windows.Forms.Label();
             this.kesimCheckBox = new System.Windows.Forms.CheckBox();
             this.yapistirmaCheckBox = new System.Windows.Forms.CheckBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.kagitBilgileri.SuspendLayout();
             this.onBaskıPanel.SuspendLayout();
             this.arkaBaskiPanel.SuspendLayout();
@@ -209,14 +213,14 @@ namespace MatbaaYonetim
             this.label2.TabIndex = 2;
             this.label2.Text = "İŞİN ADI";
             // 
-            // textBox1
+            // isAdiBox
             // 
-            this.textBox1.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBox1.ForeColor = System.Drawing.Color.Black;
-            this.textBox1.Location = new System.Drawing.Point(200, 99);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(171, 35);
-            this.textBox1.TabIndex = 3;
+            this.isAdiBox.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.isAdiBox.ForeColor = System.Drawing.Color.Black;
+            this.isAdiBox.Location = new System.Drawing.Point(200, 99);
+            this.isAdiBox.Name = "isAdiBox";
+            this.isAdiBox.Size = new System.Drawing.Size(171, 35);
+            this.isAdiBox.TabIndex = 3;
             // 
             // label3
             // 
@@ -460,6 +464,7 @@ namespace MatbaaYonetim
             // onBaskıPanel
             // 
             this.onBaskıPanel.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.onBaskıPanel.Controls.Add(this.dispersOnCheck);
             this.onBaskıPanel.Controls.Add(this.lakAdetOnText);
             this.onBaskıPanel.Controls.Add(this.label44);
             this.onBaskıPanel.Controls.Add(this.selefonAdetOnText);
@@ -483,14 +488,26 @@ namespace MatbaaYonetim
             this.onBaskıPanel.Controls.Add(this.label14);
             this.onBaskıPanel.Location = new System.Drawing.Point(57, 401);
             this.onBaskıPanel.Name = "onBaskıPanel";
-            this.onBaskıPanel.Size = new System.Drawing.Size(300, 308);
+            this.onBaskıPanel.Size = new System.Drawing.Size(300, 329);
             this.onBaskıPanel.TabIndex = 15;
             this.onBaskıPanel.Visible = false;
             this.onBaskıPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.onBaskıPanel_Paint);
             // 
+            // dispersOnCheck
+            // 
+            this.dispersOnCheck.AutoSize = true;
+            this.dispersOnCheck.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.dispersOnCheck.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.dispersOnCheck.Location = new System.Drawing.Point(36, 75);
+            this.dispersOnCheck.Name = "dispersOnCheck";
+            this.dispersOnCheck.Size = new System.Drawing.Size(182, 24);
+            this.dispersOnCheck.TabIndex = 21;
+            this.dispersOnCheck.Text = "Dispersiyon                  ";
+            this.dispersOnCheck.UseVisualStyleBackColor = true;
+            // 
             // lakAdetOnText
             // 
-            this.lakAdetOnText.Location = new System.Drawing.Point(152, 237);
+            this.lakAdetOnText.Location = new System.Drawing.Point(152, 255);
             this.lakAdetOnText.Name = "lakAdetOnText";
             this.lakAdetOnText.Size = new System.Drawing.Size(122, 23);
             this.lakAdetOnText.TabIndex = 20;
@@ -499,7 +516,7 @@ namespace MatbaaYonetim
             // 
             this.label44.AutoSize = true;
             this.label44.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label44.Location = new System.Drawing.Point(35, 237);
+            this.label44.Location = new System.Drawing.Point(35, 255);
             this.label44.Name = "label44";
             this.label44.Size = new System.Drawing.Size(78, 20);
             this.label44.TabIndex = 19;
@@ -507,7 +524,7 @@ namespace MatbaaYonetim
             // 
             // selefonAdetOnText
             // 
-            this.selefonAdetOnText.Location = new System.Drawing.Point(152, 145);
+            this.selefonAdetOnText.Location = new System.Drawing.Point(152, 163);
             this.selefonAdetOnText.Name = "selefonAdetOnText";
             this.selefonAdetOnText.Size = new System.Drawing.Size(122, 23);
             this.selefonAdetOnText.TabIndex = 18;
@@ -516,7 +533,7 @@ namespace MatbaaYonetim
             // 
             this.label43.AutoSize = true;
             this.label43.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label43.Location = new System.Drawing.Point(35, 145);
+            this.label43.Location = new System.Drawing.Point(35, 163);
             this.label43.Name = "label43";
             this.label43.Size = new System.Drawing.Size(106, 20);
             this.label43.TabIndex = 17;
@@ -524,7 +541,7 @@ namespace MatbaaYonetim
             // 
             // yaldizOnText
             // 
-            this.yaldizOnText.Location = new System.Drawing.Point(152, 268);
+            this.yaldizOnText.Location = new System.Drawing.Point(152, 286);
             this.yaldizOnText.Name = "yaldizOnText";
             this.yaldizOnText.Size = new System.Drawing.Size(121, 23);
             this.yaldizOnText.TabIndex = 16;
@@ -533,7 +550,7 @@ namespace MatbaaYonetim
             // 
             this.label34.AutoSize = true;
             this.label34.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label34.Location = new System.Drawing.Point(36, 271);
+            this.label34.Location = new System.Drawing.Point(36, 289);
             this.label34.Name = "label34";
             this.label34.Size = new System.Drawing.Size(49, 20);
             this.label34.TabIndex = 15;
@@ -555,7 +572,7 @@ namespace MatbaaYonetim
             this.lakTuruCombo_on.Items.AddRange(new object[] {
             "UV LAK",
             "MAT VERNİK"});
-            this.lakTuruCombo_on.Location = new System.Drawing.Point(152, 207);
+            this.lakTuruCombo_on.Location = new System.Drawing.Point(152, 225);
             this.lakTuruCombo_on.Name = "lakTuruCombo_on";
             this.lakTuruCombo_on.Size = new System.Drawing.Size(121, 23);
             this.lakTuruCombo_on.TabIndex = 13;
@@ -564,7 +581,7 @@ namespace MatbaaYonetim
             // 
             this.label20.AutoSize = true;
             this.label20.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label20.Location = new System.Drawing.Point(35, 207);
+            this.label20.Location = new System.Drawing.Point(35, 225);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(69, 20);
             this.label20.TabIndex = 12;
@@ -572,7 +589,7 @@ namespace MatbaaYonetim
             // 
             // lakEbadı2_on
             // 
-            this.lakEbadı2_on.Location = new System.Drawing.Point(225, 177);
+            this.lakEbadı2_on.Location = new System.Drawing.Point(225, 195);
             this.lakEbadı2_on.Name = "lakEbadı2_on";
             this.lakEbadı2_on.Size = new System.Drawing.Size(49, 23);
             this.lakEbadı2_on.TabIndex = 11;
@@ -580,7 +597,7 @@ namespace MatbaaYonetim
             // label19
             // 
             this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(208, 180);
+            this.label19.Location = new System.Drawing.Point(208, 198);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(13, 15);
             this.label19.TabIndex = 10;
@@ -588,7 +605,7 @@ namespace MatbaaYonetim
             // 
             // lakEbadı1_on
             // 
-            this.lakEbadı1_on.Location = new System.Drawing.Point(153, 177);
+            this.lakEbadı1_on.Location = new System.Drawing.Point(153, 195);
             this.lakEbadı1_on.Name = "lakEbadı1_on";
             this.lakEbadı1_on.Size = new System.Drawing.Size(49, 23);
             this.lakEbadı1_on.TabIndex = 9;
@@ -597,7 +614,7 @@ namespace MatbaaYonetim
             // 
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label18.Location = new System.Drawing.Point(36, 176);
+            this.label18.Location = new System.Drawing.Point(36, 194);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(75, 20);
             this.label18.TabIndex = 8;
@@ -609,7 +626,7 @@ namespace MatbaaYonetim
             this.selefonTuruCombo_on.Items.AddRange(new object[] {
             "MAT",
             "PARLAK"});
-            this.selefonTuruCombo_on.Location = new System.Drawing.Point(153, 115);
+            this.selefonTuruCombo_on.Location = new System.Drawing.Point(153, 133);
             this.selefonTuruCombo_on.Name = "selefonTuruCombo_on";
             this.selefonTuruCombo_on.Size = new System.Drawing.Size(121, 23);
             this.selefonTuruCombo_on.TabIndex = 7;
@@ -618,7 +635,7 @@ namespace MatbaaYonetim
             // 
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label17.Location = new System.Drawing.Point(36, 118);
+            this.label17.Location = new System.Drawing.Point(36, 136);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(97, 20);
             this.label17.TabIndex = 6;
@@ -626,7 +643,7 @@ namespace MatbaaYonetim
             // 
             // selefonEbad2_on
             // 
-            this.selefonEbad2_on.Location = new System.Drawing.Point(224, 82);
+            this.selefonEbad2_on.Location = new System.Drawing.Point(224, 100);
             this.selefonEbad2_on.Name = "selefonEbad2_on";
             this.selefonEbad2_on.Size = new System.Drawing.Size(49, 23);
             this.selefonEbad2_on.TabIndex = 5;
@@ -634,7 +651,7 @@ namespace MatbaaYonetim
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(207, 85);
+            this.label16.Location = new System.Drawing.Point(207, 103);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(13, 15);
             this.label16.TabIndex = 4;
@@ -642,7 +659,7 @@ namespace MatbaaYonetim
             // 
             // selefonEbad1_on
             // 
-            this.selefonEbad1_on.Location = new System.Drawing.Point(152, 82);
+            this.selefonEbad1_on.Location = new System.Drawing.Point(152, 100);
             this.selefonEbad1_on.Name = "selefonEbad1_on";
             this.selefonEbad1_on.Size = new System.Drawing.Size(49, 23);
             this.selefonEbad1_on.TabIndex = 3;
@@ -651,7 +668,7 @@ namespace MatbaaYonetim
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label15.Location = new System.Drawing.Point(35, 85);
+            this.label15.Location = new System.Drawing.Point(35, 103);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(103, 20);
             this.label15.TabIndex = 2;
@@ -679,6 +696,7 @@ namespace MatbaaYonetim
             // arkaBaskiPanel
             // 
             this.arkaBaskiPanel.BackColor = System.Drawing.SystemColors.ControlDark;
+            this.arkaBaskiPanel.Controls.Add(this.dispersArkaCheck);
             this.arkaBaskiPanel.Controls.Add(this.selefonAdetArkaText);
             this.arkaBaskiPanel.Controls.Add(this.lakAdetArkaText);
             this.arkaBaskiPanel.Controls.Add(this.label46);
@@ -702,20 +720,32 @@ namespace MatbaaYonetim
             this.arkaBaskiPanel.Controls.Add(this.label29);
             this.arkaBaskiPanel.Location = new System.Drawing.Point(805, 401);
             this.arkaBaskiPanel.Name = "arkaBaskiPanel";
-            this.arkaBaskiPanel.Size = new System.Drawing.Size(300, 308);
+            this.arkaBaskiPanel.Size = new System.Drawing.Size(300, 329);
             this.arkaBaskiPanel.TabIndex = 16;
             this.arkaBaskiPanel.Visible = false;
             // 
+            // dispersArkaCheck
+            // 
+            this.dispersArkaCheck.AutoSize = true;
+            this.dispersArkaCheck.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.dispersArkaCheck.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.dispersArkaCheck.Location = new System.Drawing.Point(32, 75);
+            this.dispersArkaCheck.Name = "dispersArkaCheck";
+            this.dispersArkaCheck.Size = new System.Drawing.Size(182, 24);
+            this.dispersArkaCheck.TabIndex = 22;
+            this.dispersArkaCheck.Text = "Dispersiyon                  ";
+            this.dispersArkaCheck.UseVisualStyleBackColor = true;
+            // 
             // selefonAdetArkaText
             // 
-            this.selefonAdetArkaText.Location = new System.Drawing.Point(150, 145);
+            this.selefonAdetArkaText.Location = new System.Drawing.Point(149, 163);
             this.selefonAdetArkaText.Name = "selefonAdetArkaText";
             this.selefonAdetArkaText.Size = new System.Drawing.Size(122, 23);
             this.selefonAdetArkaText.TabIndex = 22;
             // 
             // lakAdetArkaText
             // 
-            this.lakAdetArkaText.Location = new System.Drawing.Point(150, 236);
+            this.lakAdetArkaText.Location = new System.Drawing.Point(149, 254);
             this.lakAdetArkaText.Name = "lakAdetArkaText";
             this.lakAdetArkaText.Size = new System.Drawing.Size(122, 23);
             this.lakAdetArkaText.TabIndex = 22;
@@ -724,7 +754,7 @@ namespace MatbaaYonetim
             // 
             this.label46.AutoSize = true;
             this.label46.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label46.Location = new System.Drawing.Point(33, 145);
+            this.label46.Location = new System.Drawing.Point(32, 163);
             this.label46.Name = "label46";
             this.label46.Size = new System.Drawing.Size(106, 20);
             this.label46.TabIndex = 21;
@@ -732,7 +762,7 @@ namespace MatbaaYonetim
             // 
             // yaldizArkaText
             // 
-            this.yaldizArkaText.Location = new System.Drawing.Point(150, 264);
+            this.yaldizArkaText.Location = new System.Drawing.Point(149, 282);
             this.yaldizArkaText.Name = "yaldizArkaText";
             this.yaldizArkaText.Size = new System.Drawing.Size(121, 23);
             this.yaldizArkaText.TabIndex = 18;
@@ -741,7 +771,7 @@ namespace MatbaaYonetim
             // 
             this.label45.AutoSize = true;
             this.label45.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label45.Location = new System.Drawing.Point(33, 236);
+            this.label45.Location = new System.Drawing.Point(32, 254);
             this.label45.Name = "label45";
             this.label45.Size = new System.Drawing.Size(78, 20);
             this.label45.TabIndex = 21;
@@ -761,7 +791,7 @@ namespace MatbaaYonetim
             // 
             this.label35.AutoSize = true;
             this.label35.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label35.Location = new System.Drawing.Point(33, 267);
+            this.label35.Location = new System.Drawing.Point(32, 285);
             this.label35.Name = "label35";
             this.label35.Size = new System.Drawing.Size(49, 20);
             this.label35.TabIndex = 17;
@@ -773,7 +803,7 @@ namespace MatbaaYonetim
             this.lakTuruCombo_arka.Items.AddRange(new object[] {
             "UV LAK",
             "MAT VERNİK"});
-            this.lakTuruCombo_arka.Location = new System.Drawing.Point(150, 206);
+            this.lakTuruCombo_arka.Location = new System.Drawing.Point(149, 224);
             this.lakTuruCombo_arka.Name = "lakTuruCombo_arka";
             this.lakTuruCombo_arka.Size = new System.Drawing.Size(121, 23);
             this.lakTuruCombo_arka.TabIndex = 13;
@@ -782,7 +812,7 @@ namespace MatbaaYonetim
             // 
             this.label23.AutoSize = true;
             this.label23.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label23.Location = new System.Drawing.Point(33, 206);
+            this.label23.Location = new System.Drawing.Point(32, 224);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(69, 20);
             this.label23.TabIndex = 12;
@@ -790,7 +820,7 @@ namespace MatbaaYonetim
             // 
             // lakEbadı2_arka
             // 
-            this.lakEbadı2_arka.Location = new System.Drawing.Point(222, 176);
+            this.lakEbadı2_arka.Location = new System.Drawing.Point(221, 194);
             this.lakEbadı2_arka.Name = "lakEbadı2_arka";
             this.lakEbadı2_arka.Size = new System.Drawing.Size(49, 23);
             this.lakEbadı2_arka.TabIndex = 11;
@@ -798,7 +828,7 @@ namespace MatbaaYonetim
             // label24
             // 
             this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(205, 179);
+            this.label24.Location = new System.Drawing.Point(204, 197);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(13, 15);
             this.label24.TabIndex = 10;
@@ -806,7 +836,7 @@ namespace MatbaaYonetim
             // 
             // lakEbadı1_arka
             // 
-            this.lakEbadı1_arka.Location = new System.Drawing.Point(150, 176);
+            this.lakEbadı1_arka.Location = new System.Drawing.Point(149, 194);
             this.lakEbadı1_arka.Name = "lakEbadı1_arka";
             this.lakEbadı1_arka.Size = new System.Drawing.Size(49, 23);
             this.lakEbadı1_arka.TabIndex = 9;
@@ -815,7 +845,7 @@ namespace MatbaaYonetim
             // 
             this.label25.AutoSize = true;
             this.label25.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label25.Location = new System.Drawing.Point(33, 176);
+            this.label25.Location = new System.Drawing.Point(32, 194);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(75, 20);
             this.label25.TabIndex = 8;
@@ -827,7 +857,7 @@ namespace MatbaaYonetim
             this.selefonTuruCombo_arka.Items.AddRange(new object[] {
             "MAT",
             "PARLAK"});
-            this.selefonTuruCombo_arka.Location = new System.Drawing.Point(150, 115);
+            this.selefonTuruCombo_arka.Location = new System.Drawing.Point(149, 133);
             this.selefonTuruCombo_arka.Name = "selefonTuruCombo_arka";
             this.selefonTuruCombo_arka.Size = new System.Drawing.Size(121, 23);
             this.selefonTuruCombo_arka.TabIndex = 7;
@@ -836,7 +866,7 @@ namespace MatbaaYonetim
             // 
             this.label26.AutoSize = true;
             this.label26.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label26.Location = new System.Drawing.Point(33, 118);
+            this.label26.Location = new System.Drawing.Point(32, 136);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(97, 20);
             this.label26.TabIndex = 6;
@@ -844,7 +874,7 @@ namespace MatbaaYonetim
             // 
             // selefonEbat2_arka
             // 
-            this.selefonEbat2_arka.Location = new System.Drawing.Point(222, 82);
+            this.selefonEbat2_arka.Location = new System.Drawing.Point(221, 100);
             this.selefonEbat2_arka.Name = "selefonEbat2_arka";
             this.selefonEbat2_arka.Size = new System.Drawing.Size(49, 23);
             this.selefonEbat2_arka.TabIndex = 5;
@@ -852,7 +882,7 @@ namespace MatbaaYonetim
             // label27
             // 
             this.label27.AutoSize = true;
-            this.label27.Location = new System.Drawing.Point(205, 85);
+            this.label27.Location = new System.Drawing.Point(204, 103);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(13, 15);
             this.label27.TabIndex = 4;
@@ -860,7 +890,7 @@ namespace MatbaaYonetim
             // 
             // selefonEbat1_arka
             // 
-            this.selefonEbat1_arka.Location = new System.Drawing.Point(150, 82);
+            this.selefonEbat1_arka.Location = new System.Drawing.Point(149, 100);
             this.selefonEbat1_arka.Name = "selefonEbat1_arka";
             this.selefonEbat1_arka.Size = new System.Drawing.Size(49, 23);
             this.selefonEbat1_arka.TabIndex = 3;
@@ -869,7 +899,7 @@ namespace MatbaaYonetim
             // 
             this.label28.AutoSize = true;
             this.label28.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label28.Location = new System.Drawing.Point(33, 85);
+            this.label28.Location = new System.Drawing.Point(32, 103);
             this.label28.Name = "label28";
             this.label28.Size = new System.Drawing.Size(103, 20);
             this.label28.TabIndex = 2;
@@ -1297,7 +1327,7 @@ namespace MatbaaYonetim
             this.kesimPanel.Controls.Add(this.label41);
             this.kesimPanel.Controls.Add(this.kesimİslemCombo);
             this.kesimPanel.Controls.Add(this.label48);
-            this.kesimPanel.Location = new System.Drawing.Point(57, 738);
+            this.kesimPanel.Location = new System.Drawing.Point(57, 763);
             this.kesimPanel.Name = "kesimPanel";
             this.kesimPanel.Size = new System.Drawing.Size(300, 180);
             this.kesimPanel.TabIndex = 17;
@@ -1400,7 +1430,7 @@ namespace MatbaaYonetim
             this.yapistirmaPanel.Controls.Add(this.label52);
             this.yapistirmaPanel.Controls.Add(this.yapistirmaIslemCombo);
             this.yapistirmaPanel.Controls.Add(this.label53);
-            this.yapistirmaPanel.Location = new System.Drawing.Point(381, 738);
+            this.yapistirmaPanel.Location = new System.Drawing.Point(381, 763);
             this.yapistirmaPanel.Name = "yapistirmaPanel";
             this.yapistirmaPanel.Size = new System.Drawing.Size(300, 180);
             this.yapistirmaPanel.TabIndex = 20;
@@ -1530,11 +1560,23 @@ namespace MatbaaYonetim
             this.yapistirmaCheckBox.UseVisualStyleBackColor = true;
             this.yapistirmaCheckBox.CheckedChanged += new System.EventHandler(this.yapistirmaCheckBox_CheckedChanged);
             // 
+            // button1
+            // 
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.Location = new System.Drawing.Point(1179, 739);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(224, 212);
+            this.button1.TabIndex = 27;
+            this.button1.Text = "BUTON";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // baskiFormu1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(57)))), ((int)(((byte)(75)))));
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.yapistirmaCheckBox);
             this.Controls.Add(this.kesimCheckBox);
             this.Controls.Add(this.yapistirmaPanel);
@@ -1562,7 +1604,7 @@ namespace MatbaaYonetim
             this.Controls.Add(this.label4);
             this.Controls.Add(this.isTuruBox);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.isAdiBox);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.firmaAdiBox);
             this.Controls.Add(this.label1);
@@ -1592,7 +1634,7 @@ namespace MatbaaYonetim
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ComboBox firmaAdiBox;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox isAdiBox;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox isTuruBox;
         private System.Windows.Forms.Label label4;
@@ -1724,5 +1766,8 @@ namespace MatbaaYonetim
         private System.Windows.Forms.Label label53;
         private System.Windows.Forms.CheckBox kesimCheckBox;
         private System.Windows.Forms.CheckBox yapistirmaCheckBox;
+        private System.Windows.Forms.CheckBox dispersOnCheck;
+        private System.Windows.Forms.CheckBox dispersArkaCheck;
+        private System.Windows.Forms.Button button1;
     }
 }

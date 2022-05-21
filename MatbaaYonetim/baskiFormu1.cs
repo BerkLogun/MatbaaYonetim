@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace MatbaaYonetim
 {
@@ -244,6 +245,59 @@ namespace MatbaaYonetim
             else
             {
                 kesimPanel.Visible = false;
+            }
+        }
+        public static string connectionString = "Data Source=(LocalDb)\\LocalDb;Initial Catalog=MatbaaLogs;Integrated Security=True";
+        private void button1_Click(object sender, EventArgs e)
+        {
+            string connectionString = "Data Source=(LocalDb)\\LocalDb;Initial Catalog=MatbaaLogs;Integrated Security=True";
+            SqlConnection connect = new SqlConnection(connectionString);
+            var random = new Random();
+            int id = random.Next();
+            int tarih = random.Next()+1;
+            try
+            {
+                connect.Open();
+                /*
+                SqlCommand cmd = new SqlCommand("insert into isListesi(isID,tarih,firmaAdi,isAdi,isTuru,makine," +
+                    "formaSayisi,notlar,ekstraBoyaDokumu,yaldizGideri,gramajCins,kagitEbat,gelenTabaka," +
+                    "baskiEbatX,baskiEbatY,kesilenAdet,baskiYuzu,kesim,yapistirma,baskiTuruOn,dispersiyOn," +
+                    "selefOnX,selefOnY,selefOnTuru,selefOnAdet,lakOnEbatX,lakOnEbatY,lakOnTur,lakOnAdet," +
+                    "yaldizOn,onEkstraSayi,onEx1,onEx2,onEx3,onEx4,onEx5,onEx6," +
+                    "baskiTuruArka,dispersiyonArka,selefonArkaX,selefonArkaY,selefonTuruArka,selefonAdetArka," +
+                    "lakArkaEbatX,lakArkaEbatY,lakArkaTur,lakArkaAdet,yaldizArka,arkaEkstraSayi," +
+                    "arkaEx1,arkaEx2,arkaEx3,arkaEx4,arkaEx5,arkaEx6,kesimIslem,kesimEbatX,kesimEbatY,kesimAdet," +
+                    "yapistirmaIslem,yapistirmaEbatX,yapistirmaEbatY,yapistirmaAdet,yapistirmaBoy) " +
+                    "values ("+id+","+tarih+","+firmaAdiBox.Text+","+isAdiBox.Text+","+isTuruBox.Text+","+
+                    makineBox.Text+","+formaSayisiText.Text+","+exBoyaDText.Text+","+yaldizGideriText.Text+","+
+                    gramajCinsText.Text+","+kagitEbatText.Text+","+gelenTabakaText.Text+","+baskiEbatText_1.Text+","+
+                    baskiEbatText_2.Text+","+kesilenAdetText.Text+","+baskiYuzuCombo.Text+","+kesimCheckBox.Checked.ToString()+","+
+                    yapistirmaCheckBox.Checked.ToString()+","+baskıTuruCombo_on.Text+","+dispersOnCheck.Checked.ToString()+","+
+                    selefonEbad1_on.Text+","+selefonEbad2_on+","+selefonTuruCombo_on.Text+","+selefonAdetOnText.Text+","+
+                    lakEbadı1_on.Text+","+lakEbadı2_on.Text+","+lakTuruCombo_on.Text+","+lakAdetOnText.Text+","+yaldizOnText.Text+","+
+                    önExSayiCombo.Text+","+extratext1.Text+","+extratext2.Text+","+extratext3.Text+","+extratext4+","+extratext5+","+extratext6.Text+","+
+                    baskiTuruCombo_arka.Text+","+dispersArkaCheck.Checked.ToString()+","+selefonEbat1_arka.Text+","+selefonEbat2_arka.Text+","+
+                    selefonTuruCombo_arka.Text+","+selefonAdetArkaText.Text+","+lakEbadı1_arka.Text+","+lakEbadı2_arka.Text+","+lakTuruCombo_arka.Text+","+
+                    lakAdetArkaText.Text+","+yaldizArkaText.Text+","+arkaExSayiCombo.Text+","+extraArkatext1.Text+","+extraArkatext2.Text+","+
+                    extraArkatext3.Text+","+extraArkatext4.Text+","+extraArkatext5.Text+","+extraArkatext6.Text+","+kesimİslemCombo.Text+","+
+                    kesimEbat1.Text+","+kesimEbat2.Text+","+kesimAdetText.Text+","+yapistirmaIslemCombo.Text+","+yapistirmaIslem1Text.Text+","+
+                    yapistirmaIslem2Text.Text+","+yapistirmaAdetText.Text+","+yapistirmaBoyText.Text+" ",connect);
+                */
+                MessageBox.Show("basarili");
+                SqlCommand cmd = new SqlCommand("INSERT INTO isListesi(isID) VALUES (" + id + ")");
+                cmd.Connection = connect;
+
+                connect.Close();
+
+                int i = cmd.ExecuteNonQuery();
+                if (i != 0)
+                {
+                    MessageBox.Show("basarili");
+                }
+            }
+            catch(Exception a)
+            {
+
             }
         }
     }

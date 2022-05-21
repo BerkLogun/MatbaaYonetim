@@ -17,17 +17,20 @@ namespace MatbaaYonetim
         public birimFiyatlari()
         {
             InitializeComponent();
+            
             dosyaOkumaYazma();
         }
-        static string connectionString = "Data Source=(LocalDb)\\LocalDb;Initial Catalog=MatbaaLogs;Integrated Security=True";
+        public static string connectionString = "Data Source=(LocalDb)\\LocalDb;Initial Catalog=MatbaaLogs;Integrated Security=True";
         public void dosyaOkumaYazma()
         {
+            /*
             SqlConnection connect = new SqlConnection(connectionString);
 
             // Fiyat listesindeki elemanları daha kolay erişim için list icerisine eklenmesi
 
             try
             {
+                
                 connect.Open();
                 SqlCommand cmd = new SqlCommand("Select cmyk_70x100Fiyat,ekstra1_70x100Fiyat,ekstra2_70x100Fiyat,ekstra3_70x100Fiyat,ekstra4_70x100Fiyat,baski41_70x100Fiyat,baski42_70x100Fiyat,tirajCMYK_70x100Fiyat,tirajEKSTRA_70x100Fiyat,dispLAK_70x100Fiyat,dispGecis_70x100Fiyat,cmykEkstraBoya_70x100Fiyat,cmyk_50x70Fiyat,ekstra1_50x70Fiyat,ekstra2_50x70Fiyat,ekstra3_50x70Fiyat,ekstra4_50x70Fiyat,baski41_50x70Fiyat,baski42_50x70Fiyat,tirajCMYK_50x70Fiyat,tirajEKSTRA_50x70Fiyat,parlakSelefonFiyat,parlakSF_50x70Fiyat,matSelefonFiyat,matSF_50x70Fiyat,renk_35x50Fiyat,tiraj_35x50Fiyat,uvLakMFiyat,bobstCemberFiyat,bobstGecisFiyat,yaldizBobstGecisFiyat,yaldizBobstCemberFiyat,yaldizKazanliGecisFiyat,yaldizKazanliCemberFiyat,kazanliKesimCemberFİyat,kazanliKesimGecisFiyat from fiyatListesi ");
                 cmd.Connection = connect;
@@ -82,6 +85,7 @@ namespace MatbaaYonetim
                     }
 
                 }
+                
 
 
 
@@ -91,6 +95,12 @@ namespace MatbaaYonetim
             {
                 MessageBox.Show(hata.Message);
             }
+            
+            */
         }
+
+
+
+
     }
 }
