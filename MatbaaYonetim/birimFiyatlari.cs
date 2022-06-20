@@ -20,10 +20,11 @@ namespace MatbaaYonetim
             
             dosyaOkumaYazma();
         }
-        public static string connectionString = "Data Source=(LocalDb)\\LocalDb;Initial Catalog=MatbaaLogs;Integrated Security=True";
+        //public static string connectionString = "Data Source=(LocalDb)\\LocalDb;Initial Catalog=MatbaaLogs;Integrated Security=True";
+        public static string connectionString = "Data Source=matbaa-yonetim.database.windows.net;Initial Catalog=MatbaaLogs;Persist Security Info=True;User ID=ecra;Password=berkod123A";
         public void dosyaOkumaYazma()
         {
-            /*
+            
             SqlConnection connect = new SqlConnection(connectionString);
 
             // Fiyat listesindeki elemanları daha kolay erişim için list icerisine eklenmesi
@@ -96,7 +97,7 @@ namespace MatbaaYonetim
                 MessageBox.Show(hata.Message);
             }
             
-            */
+            
         }
 
 
