@@ -44,7 +44,8 @@ namespace MatbaaYonetim
             this.lakSira = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bobstSira = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.kazanliSira = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.siralamaGuncelle = new System.Windows.Forms.Button();
+            this.isID1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tarih = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.firmaAdi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -74,7 +75,7 @@ namespace MatbaaYonetim
             this.isListesiDataGrid.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             this.isListesiDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.isListesiDataGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
+            this.isID1,
             this.tarih,
             this.firmaAdi,
             this.dataGridViewTextBoxColumn2,
@@ -191,10 +192,20 @@ namespace MatbaaYonetim
             this.kazanliSira.HeaderText = "kazanliSira";
             this.kazanliSira.Name = "kazanliSira";
             // 
-            // dataGridViewTextBoxColumn1
+            // siralamaGuncelle
             // 
-            this.dataGridViewTextBoxColumn1.HeaderText = "isID";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.siralamaGuncelle.Location = new System.Drawing.Point(1515, 292);
+            this.siralamaGuncelle.Name = "siralamaGuncelle";
+            this.siralamaGuncelle.Size = new System.Drawing.Size(73, 40);
+            this.siralamaGuncelle.TabIndex = 2;
+            this.siralamaGuncelle.Text = "SIRALAMA GÜNCELLE";
+            this.siralamaGuncelle.UseVisualStyleBackColor = true;
+            this.siralamaGuncelle.Click += new System.EventHandler(this.siralamaGuncelle_Click);
+            // 
+            // isID1
+            // 
+            this.isID1.HeaderText = "isID";
+            this.isID1.Name = "isID1";
             // 
             // tarih
             // 
@@ -276,6 +287,7 @@ namespace MatbaaYonetim
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(57)))), ((int)(((byte)(75)))));
+            this.Controls.Add(this.siralamaGuncelle);
             this.Controls.Add(this.filtreCombo1);
             this.Controls.Add(this.isListesiDataGrid);
             this.Name = "IsListesi";
@@ -302,7 +314,8 @@ namespace MatbaaYonetim
         private System.Windows.Forms.DataGridViewTextBoxColumn lakSira;
         private System.Windows.Forms.DataGridViewTextBoxColumn bobstSira;
         private System.Windows.Forms.DataGridViewTextBoxColumn kazanliSira;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.Button siralamaGuncelle;
+        private System.Windows.Forms.DataGridViewTextBoxColumn isID1;
         private System.Windows.Forms.DataGridViewTextBoxColumn tarih;
         private System.Windows.Forms.DataGridViewTextBoxColumn firmaAdi;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;

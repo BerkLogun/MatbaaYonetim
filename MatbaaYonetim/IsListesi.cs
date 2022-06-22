@@ -49,7 +49,7 @@ namespace MatbaaYonetim
                 isListesiDataGrid.Rows.Clear();
                 connect.Open();
 
-                SqlCommand cmd = new SqlCommand("SELECT isID, tarih, firmaAdi, isAdi, makine, lakOnTur, kesilenAdet, kagitEbat, gramajCins FROM isListesi WHERE NOT selefOnX =''");
+                SqlCommand cmd = new SqlCommand("SELECT isID, tarih, firmaAdi, isAdi, makine, lakOnTur, kesilenAdet, kagitEbat, gramajCins FROM isListesi WHERE NOT selefOnX ='' ORDER BY selefonSira");
                 cmd.Connection = connect;
                 SqlDataReader da = cmd.ExecuteReader();
 
@@ -65,7 +65,7 @@ namespace MatbaaYonetim
                 isListesiDataGrid.Rows.Clear();
                 connect.Open();
 
-                SqlCommand cmd = new SqlCommand("SELECT isID, tarih, firmaAdi, isAdi, makine, lakOnTur, kesilenAdet, kagitEbat, gramajCins FROM isListesi WHERE NOT lakOnEbatX =''");
+                SqlCommand cmd = new SqlCommand("SELECT isID, tarih, firmaAdi, isAdi, makine, lakOnTur, kesilenAdet, kagitEbat, gramajCins FROM isListesi WHERE NOT lakOnEbatX ='' ORDER BY lakSira");
                 cmd.Connection = connect;
                 SqlDataReader da = cmd.ExecuteReader();
 
@@ -81,7 +81,7 @@ namespace MatbaaYonetim
                 isListesiDataGrid.Rows.Clear();
                 connect.Open();
 
-                SqlCommand cmd = new SqlCommand("SELECT isID, tarih, firmaAdi, isAdi, makine, lakOnTur, kesilenAdet, kagitEbat, gramajCins FROM isListesi WHERE kesimIslem ='BOBST GOFRE'");
+                SqlCommand cmd = new SqlCommand("SELECT isID, tarih, firmaAdi, isAdi, makine, lakOnTur, kesilenAdet, kagitEbat, gramajCins FROM isListesi WHERE kesimIslem ='BOBST GOFRE' ORDER BY bobstSira");
                 cmd.Connection = connect;
                 SqlDataReader da = cmd.ExecuteReader();
 
@@ -97,7 +97,7 @@ namespace MatbaaYonetim
                 isListesiDataGrid.Rows.Clear();
                 connect.Open();
 
-                SqlCommand cmd = new SqlCommand("SELECT isID, tarih, firmaAdi, isAdi, makine, lakOnTur, kesilenAdet, kagitEbat, gramajCins FROM isListesi WHERE kesimIslem ='KAZANLI KESIM'");
+                SqlCommand cmd = new SqlCommand("SELECT isID, tarih, firmaAdi, isAdi, makine, lakOnTur, kesilenAdet, kagitEbat, gramajCins FROM isListesi WHERE kesimIslem ='KAZANLI KESIM' ORDER BY kazanliSira");
                 cmd.Connection = connect;
                 SqlDataReader da = cmd.ExecuteReader();
 
@@ -113,7 +113,7 @@ namespace MatbaaYonetim
                 isListesiDataGrid.Rows.Clear();
                 connect.Open();
 
-                SqlCommand cmd = new SqlCommand("SELECT isID, tarih, firmaAdi, isAdi, makine, lakOnTur, kesilenAdet, kagitEbat, gramajCins FROM isListesi WHERE makine ='70X100'");
+                SqlCommand cmd = new SqlCommand("SELECT isID, tarih, firmaAdi, isAdi, makine, lakOnTur, kesilenAdet, kagitEbat, gramajCins FROM isListesi WHERE makine ='70X100' ORDER BY yetmisSira");
                 cmd.Connection = connect;
                 SqlDataReader da = cmd.ExecuteReader();
 
@@ -129,7 +129,7 @@ namespace MatbaaYonetim
                 isListesiDataGrid.Rows.Clear();
                 connect.Open();
 
-                SqlCommand cmd = new SqlCommand("SELECT isID, tarih, firmaAdi, isAdi, makine, lakOnTur, kesilenAdet, kagitEbat, gramajCins FROM isListesi WHERE makine ='50X70'");
+                SqlCommand cmd = new SqlCommand("SELECT isID, tarih, firmaAdi, isAdi, makine, lakOnTur, kesilenAdet, kagitEbat, gramajCins FROM isListesi WHERE makine ='50X70' ORDER BY elliSira");
                 cmd.Connection = connect;
                 SqlDataReader da = cmd.ExecuteReader();
 
@@ -140,12 +140,12 @@ namespace MatbaaYonetim
 
                 connect.Close();
             }
-            if (filtreCombo1.Text == "50X70")
+            if (filtreCombo1.Text == "SMS2")
             {
                 isListesiDataGrid.Rows.Clear();
                 connect.Open();
 
-                SqlCommand cmd = new SqlCommand("SELECT isID, tarih, firmaAdi, isAdi, makine, lakOnTur, kesilenAdet, kagitEbat, gramajCins FROM isListesi WHERE makine ='SMS2'");
+                SqlCommand cmd = new SqlCommand("SELECT isID, tarih, firmaAdi, isAdi, makine, lakOnTur, kesilenAdet, kagitEbat, gramajCins FROM isListesi WHERE makine ='SMS2' ORDER BY smsSira");
                 cmd.Connection = connect;
                 SqlDataReader da = cmd.ExecuteReader();
 
@@ -156,6 +156,7 @@ namespace MatbaaYonetim
 
                 connect.Close();
             }
+
 
         }
 
@@ -234,15 +235,7 @@ namespace MatbaaYonetim
 
         private void isListesiDataGrid_RowsAdded(object sender, DataGridViewRowsAddedEventArgs e)
         {
-            /*if (isListesiDataGrid.Columns.Contains("siraNo"))
-             {
-                 foreach (DataGridViewRow r in isListesiDataGrid.Rows)
-                 {
-                     r.Cells["siraNo"].Value = r.Index + 1;
-                 }
-             }
-             */
-
+            
             try
             {
                 if (filtreCombo1.Text == "SELEFON")
@@ -285,18 +278,183 @@ namespace MatbaaYonetim
                         }
                     }
                 }
-                if (filtreCombo1.Text == "KAZANLI KESİM")
+                if (filtreCombo1.Text == "70X100")
                 {
-                    if (isListesiDataGrid.Columns.Contains("kazanliSira"))
+                    if (isListesiDataGrid.Columns.Contains("sira70x100"))
                     {
                         foreach (DataGridViewRow r in isListesiDataGrid.Rows)
                         {
-                            r.Cells["kazanliSira"].Value = r.Index + 1;
+                            r.Cells["sira70x100"].Value = r.Index + 1;
+                        }
+                    }
+                }
+                if (filtreCombo1.Text == "50X70")
+                {
+                    if (isListesiDataGrid.Columns.Contains("sira50x70"))
+                    {
+                        foreach (DataGridViewRow r in isListesiDataGrid.Rows)
+                        {
+                            r.Cells["sira50x70"].Value = r.Index + 1;
+                        }
+                    }
+                }
+                if (filtreCombo1.Text == "SMS2")
+                {
+                    if (isListesiDataGrid.Columns.Contains("sms2Sira"))
+                    {
+                        foreach (DataGridViewRow r in isListesiDataGrid.Rows)
+                        {
+                            r.Cells["sms2Sira"].Value = r.Index + 1;
                         }
                     }
                 }
             }
             catch { }
+        }
+
+        private void siralamaGuncelle_Click(object sender, EventArgs e)
+        {
+            
+            string connectionString = "Data Source=matbaa-yonetim.database.windows.net;Initial Catalog=MatbaaLogs;Persist Security Info=True;User ID=ecra;Password=berkod123A";
+            SqlConnection connect = new SqlConnection(connectionString);
+
+
+            
+
+            if (filtreCombo1.Text == "SELEFON")
+            {
+                if (isListesiDataGrid.Columns.Contains("selefonSira1"))
+                {
+                    SqlCommand cmd = connect.CreateCommand();
+                    
+
+                    string selefon = "";
+                    string isNo = "";
+                    
+
+                    connect.Open();
+                    foreach (DataGridViewRow r in isListesiDataGrid.Rows)
+                    {
+
+                        selefon = r.Cells["selefonSira1"].Value.ToString();
+                        isNo = r.Cells["isID1"].Value.ToString();
+                        cmd.CommandText = "UPDATE isListesi set selefonSira = " + selefon + " WHERE isID = " + isNo;
+                        cmd.ExecuteNonQuery();
+
+                    }
+
+                    
+                }
+            }
+            if (filtreCombo1.Text == "LAK")
+            {
+                if (isListesiDataGrid.Columns.Contains("lakSira1"))
+                {
+                    SqlCommand cmd = connect.CreateCommand();
+
+                    string laksira = "";
+                    string isNo = "";
+
+                 
+                   connect.Open();
+                   foreach (DataGridViewRow r in isListesiDataGrid.Rows)
+                   {
+                       laksira = r.Cells["lakSira1"].Value.ToString();
+                       isNo = r.Cells["isID1"].Value.ToString();
+                       cmd.CommandText = "UPDATE isListesi set lakSira = " + laksira + " WHERE isID = " + isNo;
+                       cmd.ExecuteNonQuery();
+                   }
+                   connect.Close();
+                    
+                }
+            }
+            if (filtreCombo1.Text == "BOBST KESİM")
+            {
+                if (isListesiDataGrid.Columns.Contains("bobstSira1"))
+                {
+                    SqlCommand cmd = connect.CreateCommand();
+                    string bobstsira;
+                    string isNo = "";
+                    connect.Open();
+                    foreach (DataGridViewRow r in isListesiDataGrid.Rows)
+                    {
+                        bobstsira = r.Cells["bobstSira1"].Value.ToString();
+                        isNo = r.Cells["isID1"].Value.ToString();
+                        cmd.CommandText = "UPDATE isListesi set bobstSira = " + bobstsira + " WHERE isID = " + isNo;
+                        cmd.ExecuteNonQuery();
+
+                    }
+                }
+            }
+            if (filtreCombo1.Text == "KAZANLI KESİM")
+            {
+                if (isListesiDataGrid.Columns.Contains("kazanliSira1"))
+                {
+                    SqlCommand cmd = connect.CreateCommand();
+                    string kazansira;
+                    string isNo = "";
+                    connect.Open();
+                    foreach (DataGridViewRow r in isListesiDataGrid.Rows)
+                    {
+                        kazansira = r.Cells["kazanliSira1"].Value.ToString();
+                        isNo = r.Cells["isID1"].Value.ToString();
+                        cmd.CommandText = "UPDATE isListesi set kazanliSira = " + kazansira + " WHERE isID = " + isNo;
+                        cmd.ExecuteNonQuery();
+                    }
+                }
+            }
+            if (filtreCombo1.Text == "70X100")
+            {
+                if (isListesiDataGrid.Columns.Contains("sira70x100"))
+                {
+                    SqlCommand cmd = connect.CreateCommand();
+                    string yetmisira;
+                    string isNo = "";
+                    connect.Open();
+                    foreach (DataGridViewRow r in isListesiDataGrid.Rows)
+                    {
+                        yetmisira = r.Cells["sira70x100"].Value.ToString();
+                        isNo = r.Cells["isID1"].Value.ToString();
+                        cmd.CommandText = "UPDATE isListesi set yetmisSira = " + yetmisira + " WHERE isID = " + isNo;
+                        cmd.ExecuteNonQuery();
+                    }
+                }
+            }
+            if (filtreCombo1.Text == "50X70")
+            {
+                if (isListesiDataGrid.Columns.Contains("sira50x70"))
+                {
+                    SqlCommand cmd = connect.CreateCommand();
+                    string siraelli;
+                    string isNo = "";
+                    connect.Open();
+                    foreach (DataGridViewRow r in isListesiDataGrid.Rows)
+                    {
+                        siraelli = r.Cells["sira50x70"].Value.ToString();
+                        isNo = r.Cells["isID1"].Value.ToString();
+                        cmd.CommandText = "UPDATE isListesi set elliSira = " + siraelli + " WHERE isID = " + isNo;
+                        cmd.ExecuteNonQuery();
+                    }
+                }
+            }
+            if (filtreCombo1.Text == "SMS2")
+            {
+                if (isListesiDataGrid.Columns.Contains("sms2Sira"))
+                {
+                    SqlCommand cmd = connect.CreateCommand();
+                    string smsira;
+                    string isNo = "";
+                    connect.Open();
+                    foreach (DataGridViewRow r in isListesiDataGrid.Rows)
+                    {
+                        smsira = r.Cells["sms2Sira"].Value.ToString();
+                        isNo = r.Cells["isID1"].Value.ToString();
+                        cmd.CommandText = "UPDATE isListesi set smsSira = " + smsira + " WHERE isID = " + isNo;
+                        cmd.ExecuteNonQuery();
+                    }
+                }
+            }
+
         }
     }
 }
