@@ -247,7 +247,7 @@ namespace MatbaaYonetim
                 kesimPanel.Visible = false;
             }
         }
-        public static string connectionString = "Data Source=matbaa-yonetim.database.windows.net;Initial Catalog=MatbaaLogs;Persist Security Info=True;User ID=ecra;Password=berkod123A";
+        public static string connectionString = "*************";
         SqlConnection connect = new SqlConnection(connectionString);
         private void button1_Click(object sender, EventArgs e)
         {
