@@ -24,6 +24,7 @@ namespace MatbaaYonetim
             isListesi1.Hide();
             aylikRaporlar1.Hide();
             birimFiyatlari1.Hide();
+            
         }
 
         private void isBaskiButton_Click(object sender, EventArgs e)
