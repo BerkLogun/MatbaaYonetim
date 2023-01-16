@@ -315,7 +315,7 @@ namespace MatbaaYonetim
         private void siralamaGuncelle_Click(object sender, EventArgs e)
         {
             
-            string connectionString = "Data Source=matbaa-yonetim.database.windows.net;Initial Catalog=MatbaaLogs;Persist Security Info=True;User ID=ecra;Password=berkod123A";
+            string connectionString = "";
             SqlConnection connect = new SqlConnection(connectionString);
 
 
